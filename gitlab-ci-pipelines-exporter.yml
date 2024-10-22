@@ -1,0 +1,61 @@
+log:
+  level: debug
+  format: text
+
+server:
+  listen_address: :8080
+  enable_pprof: false
+  metrics:
+    enabled: true
+    enable_openmetrics_encoding: false
+  webhook:
+    enabled: false
+
+gitlab:
+  url: "https://gitlab.com.br"
+  token: ""
+  enable_health_check: true
+  maximum_requests_per_second: 50
+  burstable_requests_per_second: 100
+  maximum_jobs_queue_size: 5000
+
+pull:
+  projects_from_wildcards:
+    on_init: true
+    scheduled: true
+    interval_seconds: 1600
+
+  environments_from_projects:
+    on_init: true
+    scheduled: true
+    interval_seconds: 800
+
+  refs_from_projects:
+    on_init: true
+    scheduled: true
+    interval_seconds: 800
+
+  metrics:
+    on_init: true
+    scheduled: true
+    interval_seconds: 800
+
+project_defaults:
+  pull:
+    refs:
+      branches:
+        enabled: true
+        regexp: ".*"
+        most_recent: 0
+        max_age_seconds: 0
+        exclude_deleted: true 
+    environments:
+      enabled: true
+      regexp: ".*"
+    pipeline:
+      jobs:
+        enabled: true
+
+wildcards:
+  - {}
+
