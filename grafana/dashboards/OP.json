@@ -1,0 +1,290 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Dashboard com metricas de utilização do servidor GITLAB",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 351,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "f59aa75c-4392-4831-82ef-cd658fa44fb7"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<h1>Dashboard Operacional Gitlab</h1>\n<img src=\"https://cdn.prod.website-files.com/65172cb208ef8ecb7765b47f/65325415b94c8eb794a07d00_brand_white.svg\" loading=\"lazy\" alt=\"\" class=\"brand-image\">",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.1.4",
+      "type": "text"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 16,
+      "panels": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "description": "Documentação basica das views",
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 4
+          },
+          "id": 15,
+          "options": {
+            "code": {
+              "language": "plaintext",
+              "showLineNumbers": false,
+              "showMiniMap": false
+            },
+            "content": "\n## Dashboard Operacional\n\n### Visão Geral\nEste dashboard fornece uma visão geral da utilização dos recursos do servidor GitLab, com foco em CPU, memória e espaço em disco.\n\n### Estrutura das Linhas e Painéis\n\n#### Linha 1\n- **% Utilização de Memória por período:** Exibe a utilização percentual da memória ao longo do tempo.\n- **% de utilização de CPU:** Mostra a utilização percentual da CPU.\n- **Utilização de CPU por período:** Apresenta a utilização da CPU por períodos específicos, permitindo a análise de picos e tendências ao longo do tempo.\n\n#### Linha 2\n- **Espaço em disco:** Mostra o espaço em disco utilizado no servidor.\n- **% Espaço em disco:** Exibe o percentual de espaço em disco utilizado.\n\n### Limitações das Métricas\nDa mesma forma que no Dashboard CI/CD, este dashboard também sofre de limitações na visualização de dados por período, especialmente quando o intervalo de tempo é aumentado. Isso pode resultar em valores agregados que não capturam a granularidade completa dos dados históricos, impactando a precisão da análise para períodos longos.\n",
+            "mode": "markdown"
+          },
+          "pluginVersion": "11.1.4",
+          "title": "DOC #",
+          "type": "text"
+        }
+      ],
+      "title": "DOC #",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 14,
+      "panels": [],
+      "title": "GERAL #",
+      "type": "row"
+    },
+    {
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 5
+      },
+      "id": 11,
+      "libraryPanel": {
+        "name": "% Utilização de Memoria por periodo",
+        "uid": "advp09k396qdcf"
+      },
+      "title": "% Utilização de Memoria por periodo"
+    },
+    {
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 5
+      },
+      "id": 2,
+      "libraryPanel": {
+        "name": "% de utilização de CPU",
+        "uid": "cdvp07iojm0owb"
+      },
+      "title": "% de utilização de CPU"
+    },
+    {
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 13
+      },
+      "id": 9,
+      "libraryPanel": {
+        "name": "Utilização de CPU por periodo",
+        "uid": "advp06opmgw00d"
+      },
+      "title": "Utilização de CPU por periodo"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "f59aa75c-4392-4831-82ef-cd658fa44fb7"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "%",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 13
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "f59aa75c-4392-4831-82ef-cd658fa44fb7"
+          },
+          "editorMode": "code",
+          "expr": "100 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100)",
+          "instant": false,
+          "legendFormat": "{{instance}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Utilização de Memoria por periodo",
+      "type": "timeseries"
+    },
+    {
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 21
+      },
+      "id": 6,
+      "libraryPanel": {
+        "name": "Espaço em disco",
+        "uid": "ddvp0a80koao0b"
+      },
+      "title": "Espaço em disco"
+    },
+    {
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 21
+      },
+      "id": 4,
+      "libraryPanel": {
+        "name": "% Espaço em disco",
+        "uid": "bdvp0ana5u1hca"
+      },
+      "title": "% Espaço em disco"
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "DASHBOARD OPERACIONAL",
+  "uid": "edvp0jedqq328c",
+  "version": 4,
+  "weekStart": ""
+}
